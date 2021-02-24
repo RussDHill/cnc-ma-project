@@ -1,1 +1,1 @@
-# cnc-ma-project
+# Cloud-Native Computing - Microservices Architecture - Project
