@@ -1,0 +1,12 @@
+insert into description (id, name, description) values ('1','Anything Goes','Emmy-Award winning Megan Mullally and Tony and Olivier Award-winning Robert Lindsay star in this major new production of Cole Porter and P. G. Wodehouse\’s classic golden age musical, Anything Goes.');
+insert into description (id, name, description) values ('2','Hairspray','Michael Ball is set to reprise his role as Edna Turnblad in Hairspray, which follows the story of Tracy Turnblad, an aspiring dancer who wins a part on a local TV show, The Corny Collins Show, and becomes an overnight sensation.');
+insert into description (id, name, description) values ('3','Come From Away','Come from Away, the Broadway musical by Irene Sankoff and David Hein, is based on the events in the week following the 9/11 attacks on America, when 38 planes were ordered to land in the small Canadian town of Gander. This true story tells the tale of the town who kept 7,000 stranded visitors housed and fed following the biggest tragedy the US had seen.');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('1','2021-04-01','1','45.00','35.00','25.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('2','2021-04-02','1','45.00','35.00','25.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('3','2021-04-03','1','45.00','35.00','25.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('4','2021-04-04','2','40.00','30.00','20.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('5','2021-04-05','2','40.00','30.00','20.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('6','2021-04-06','2','40.00','30.00','20.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('7','2021-04-07','3','35.00','25.00','18.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('8','2021-04-08','3','35.00','25.00','18.00','19:30:00');
+insert into performance (id, date, description_id, price_banda, price_bandb, price_bandc, time) values ('9','2021-04-09','3','35.00','25.00','18.00','19:30:00');

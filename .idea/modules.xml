@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-config-server/cloud-config-server.iml" filepath="$PROJECT_DIR$/cloud-config-server/cloud-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netflix-eureka-server/netflix-eureka-server.iml" filepath="$PROJECT_DIR$/netflix-eureka-server/netflix-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared/shared.iml" filepath="$PROJECT_DIR$/shared/shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/theatre-bookings/theatre-bookings.iml" filepath="$PROJECT_DIR$/theatre-bookings/theatre-bookings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/theatre-performances/theatre-performances.iml" filepath="$PROJECT_DIR$/theatre-performances/theatre-performances.iml" />
+    </modules>
+  </component>
+</project>
