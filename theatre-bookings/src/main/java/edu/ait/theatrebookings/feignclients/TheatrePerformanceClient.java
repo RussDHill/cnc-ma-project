@@ -8,45 +8,45 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@FeignClient("theatre-performances")
+@FeignClient("netflix-zuul-api-gateway")    //
 public interface TheatrePerformanceClient {
 
-    @GetMapping("/descriptions")
+    @GetMapping("/theatre-performances/descriptions")
     List<Description> getDescriptions();
 
-    @GetMapping("/descriptions/summary")
+    @GetMapping("/theatre-performances/descriptions/summary")
     List<DescriptionSummary> getAllDescriptionsBySummaries();
 
-    @GetMapping("/descriptions/{id}")
+    @GetMapping("/theatre-performances/descriptions/{id}")
     Optional<Description> getDescriptionById(@PathVariable Integer id);
 
-    @DeleteMapping("/descriptions/{id}")
+    @DeleteMapping("/theatre-performances/descriptions/{id}")
     void deleteDescription(@PathVariable Integer id);
 
-    @PostMapping("descriptions/")
+    @PostMapping("/theatre-performances/descriptions/")
     ResponseEntity createDescription(@RequestBody Description newDesc);
 
-    @PutMapping("descriptions/")
+    @PutMapping("/theatre-performances/descriptions/")
     ResponseEntity updateWine(@RequestBody Description newDesc);
 
-    @GetMapping("/performances/descriptions")
+    @GetMapping("/theatre-performances/performances/descriptions")
     List<PerformanceDescription> getPerformancesDescriptions();
 
-    @GetMapping("/performances/{id}/descriptions")
+    @GetMapping("/theatre-performances/performances/{id}/descriptions")
     Optional<PerformanceDescription> getPerformancesDescriptionsById(@PathVariable Integer id);
 
-    @GetMapping("/performances")
+    @GetMapping("/theatre-performances/performances")
     List<Performance> getPerformances();
 
-    @GetMapping("/performances/{id}")
+    @GetMapping("/theatre-performances/performances/{id}")
     Optional<Performance> getPerformanceById(@PathVariable Integer id);
 
-    @DeleteMapping("/performances/{id}")
+    @DeleteMapping("/theatre-performances/performances/{id}")
     void deletePerformance(@PathVariable Integer id);
 
-    @PostMapping("performances/")
+    @PostMapping("/theatre-performances/performances/")
     ResponseEntity createPerformance(@RequestBody Performance newPerf);
 
-    @PutMapping("performances/")
+    @PutMapping("/theatre-performances/performances/")
     ResponseEntity updatePerformance(@RequestBody Performance newPerf);
 }
