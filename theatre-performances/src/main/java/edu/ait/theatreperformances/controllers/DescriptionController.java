@@ -1,6 +1,7 @@
 package edu.ait.theatreperformances.controllers;
 
 import edu.ait.theatreperformances.dto.DescriptionSummary;
+import edu.ait.theatreperformances.dto.Performance;
 import edu.ait.theatreperformances.exceptions.DataNotFoundException;
 import edu.ait.theatreperformances.repositories.DescriptionRepository;
 import edu.ait.theatreperformances.dto.Description;
@@ -34,7 +35,12 @@ public class DescriptionController {
 
     @GetMapping("/descriptions/{id}")
     public Optional<Description> getDescriptionById(@PathVariable Integer id) {
-        return descriptionRepository.findById(id);
+        Optional<Description> foundDescription = descriptionRepository.findById(id);
+        if (foundDescription.isPresent()) {
+            return foundDescription;
+        } else {
+            throw new DataNotFoundException("Unable to find description with id: " + id);
+        }
     }
 
     @DeleteMapping("/descriptions/{id}")

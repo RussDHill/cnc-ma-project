@@ -28,7 +28,12 @@ public class PerformanceController {
 
     @GetMapping("/performances/{id}")
     public Optional<Performance> getPerformanceById(@PathVariable Integer id) {
-        return performanceRepository.findById(id);
+        Optional<Performance> foundPerformance = performanceRepository.findById(id);
+        if (foundPerformance.isPresent()) {
+            return foundPerformance;
+        } else {
+            throw new DataNotFoundException("Unable to find performance with id: " + id);
+        }
     }
 
     @PostMapping("performances/")
@@ -47,15 +52,15 @@ public class PerformanceController {
     @PutMapping("performances/")
     public ResponseEntity updatePerformance(@RequestBody Performance newPerf) {
 
-        Integer newWineId = newPerf.getId();
-        Performance savedWine = performanceRepository.save(newPerf);
+        Integer newPerfId = newPerf.getId();
+        Performance savedPerf = performanceRepository.save(newPerf);
 
-        if (savedWine.getId().equals(newWineId)) {
+        if (savedPerf.getId().equals(newPerfId)) {
             return ResponseEntity.status(HttpStatus.OK).build();
         } else {
             URI location = ServletUriComponentsBuilder
                     .fromCurrentRequest().path("{id}")
-                    .buildAndExpand(savedWine.getId()).toUri();
+                    .buildAndExpand(savedPerf.getId()).toUri();
 
             return ResponseEntity.created(location).build();
         }

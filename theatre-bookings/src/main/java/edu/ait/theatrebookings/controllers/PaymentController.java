@@ -3,8 +3,10 @@ package edu.ait.theatrebookings.controllers;
 import edu.ait.theatrebookings.exceptions.DataNotFoundException;
 import edu.ait.theatrebookings.dto.Payment;
 import edu.ait.theatrebookings.repositories.PaymentRespository;
+import edu.ait.theatreperformances.dto.Performance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -41,6 +43,23 @@ public class PaymentController {
                 .buildAndExpand(newPayment.getId()).toUri();
 
         return ResponseEntity.created(location).build();
+    }
+
+    @PutMapping("payments/")
+    public ResponseEntity updatePayment(@RequestBody Payment newPayment) {
+
+        Integer newPaymentId = newPayment.getId();
+        Payment savedPayment = paymentRespository.save(newPayment);
+
+        if (savedPayment.getId().equals(newPaymentId)) {
+            return ResponseEntity.status(HttpStatus.OK).build();
+        } else {
+            URI location = ServletUriComponentsBuilder
+                    .fromCurrentRequest().path("{id}")
+                    .buildAndExpand(savedPayment.getId()).toUri();
+
+            return ResponseEntity.created(location).build();
+        }
     }
 
     @DeleteMapping("/payments/{id}")
