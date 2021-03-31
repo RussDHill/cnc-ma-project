@@ -20,7 +20,7 @@ public class SeatController {
     }
 
     @GetMapping("/seats/{id}")
-    Optional<Seat> getPaymentById(@PathVariable Integer id) {
+    Optional<Seat> getSeatById(@PathVariable Integer id) {
         return seatRespository.findById(id);
     }
 

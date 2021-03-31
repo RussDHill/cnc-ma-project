@@ -1,11 +1,14 @@
 package edu.ait.theatreperformances.dto;
 
+import io.swagger.annotations.ApiModel;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
 
 @Entity
 @Table(name="performance")
+@ApiModel(description="The name, description, date, time and cost of a performance")
 public class PerformanceDescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

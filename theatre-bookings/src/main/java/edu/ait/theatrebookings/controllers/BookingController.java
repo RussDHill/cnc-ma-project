@@ -42,7 +42,7 @@ public class BookingController {
     }
 
     @GetMapping("/bookings/performance/{id}")
-    List<Booking> getBookingPerformanceById(@PathVariable Integer id) {
+    List<Booking> getBookingByPerformanceId(@PathVariable Integer id) {
         return bookingRespository.findByPerformanceId(id);
     }
 

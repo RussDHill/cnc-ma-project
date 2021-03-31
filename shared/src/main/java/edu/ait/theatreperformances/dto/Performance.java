@@ -1,5 +1,7 @@
 package edu.ait.theatreperformances.dto;
 
+import io.swagger.annotations.ApiModel;
+
 import javax.validation.constraints.DecimalMin;
 
 import javax.persistence.*;
@@ -8,6 +10,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name="performance")
+@ApiModel(description="The date, time and cost of a performance")
 public class Performance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

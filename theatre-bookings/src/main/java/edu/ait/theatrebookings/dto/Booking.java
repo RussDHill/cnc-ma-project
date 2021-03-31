@@ -1,11 +1,14 @@
 package edu.ait.theatrebookings.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
 @Entity
+@ApiModel(description="A payment record needs to created before a booking")
 public class Booking {
 
     @Id
@@ -15,6 +18,7 @@ public class Booking {
 
     @Min(value = 1, message = "Seat Id should not be less than 1")
     @Max(value = 24, message = "Seat Id should not be greater than 24")
+    @ApiModelProperty(notes="Seat Id should be between 1 and 24 inclusive")
     private Integer seatId;
     private Integer performanceId;
 

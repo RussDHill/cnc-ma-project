@@ -1,8 +1,11 @@
 package edu.ait.theatrebookings.dto;
 
+import io.swagger.annotations.ApiModel;
+
 import javax.persistence.*;
 
 @Entity
+@ApiModel(description="This seats are read only")
 public class Seat {
 
     public enum Band {

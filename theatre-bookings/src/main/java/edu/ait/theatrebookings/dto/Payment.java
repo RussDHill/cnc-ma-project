@@ -1,10 +1,14 @@
 package edu.ait.theatrebookings.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
 import java.time.LocalDate;
 
 @Entity
+@ApiModel(description="This payment record needs to created before a booking")
 public class Payment {
 
     public enum PayType {
@@ -16,6 +20,7 @@ public class Payment {
     private Integer id;
     private LocalDate date;
     @DecimalMin("10.00")
+    @ApiModelProperty(notes="Minimum payment is 10.00 Euro")
     private Float amount;
     @Enumerated(EnumType.ORDINAL)
     private PayType payType;
