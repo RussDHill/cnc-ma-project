@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="netflix-eureka-server" />
         <module name="shared" />
         <module name="netflix-zuul-api-gateway" />
+        <module name="theatre-booking-system" />
         <module name="cloud-config-server" />
         <module name="theatre-performances" />
+        <module name="netflix-eureka-server" />
         <module name="theatre-bookings" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
       <module name="netflix-eureka-server" target="1.8" />
       <module name="netflix-zuul-api-gateway" target="1.8" />
       <module name="shared" target="1.8" />
+      <module name="theatre-booking-system" target="1.8" />
       <module name="theatre-bookings" target="1.8" />
       <module name="theatre-performances" target="1.8" />
     </bytecodeTargetLevel>
@@ -29,6 +31,7 @@
       <module name="netflix-eureka-server" options="-parameters" />
       <module name="netflix-zuul-api-gateway" options="-parameters" />
       <module name="shared" options="-parameters" />
+      <module name="theatre-booking-system" options="-parameters" />
       <module name="theatre-bookings" options="-parameters" />
       <module name="theatre-performances" options="-parameters" />
     </option>

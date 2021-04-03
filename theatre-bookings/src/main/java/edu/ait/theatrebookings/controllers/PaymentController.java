@@ -3,7 +3,6 @@ package edu.ait.theatrebookings.controllers;
 import edu.ait.theatrebookings.exceptions.DataNotFoundException;
 import edu.ait.theatrebookings.dto.Payment;
 import edu.ait.theatrebookings.repositories.PaymentRespository;
-import edu.ait.theatreperformances.dto.Performance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -70,5 +69,4 @@ public class PaymentController {
             throw new DataNotFoundException("Unable to delete payment with id: " + id);
         }
     }
-
 }

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/netflix-eureka-server/netflix-eureka-server.iml" filepath="$PROJECT_DIR$/netflix-eureka-server/netflix-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/netflix-zuul-api-gateway/netflix-zuul-api-gateway.iml" filepath="$PROJECT_DIR$/netflix-zuul-api-gateway/netflix-zuul-api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/shared/shared.iml" filepath="$PROJECT_DIR$/shared/shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/theatre-booking-system/theatre-booking-system.iml" filepath="$PROJECT_DIR$/theatre-booking-system/theatre-booking-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/theatre-bookings/theatre-bookings.iml" filepath="$PROJECT_DIR$/theatre-bookings/theatre-bookings.iml" />
       <module fileurl="file://$PROJECT_DIR$/theatre-performances/theatre-performances.iml" filepath="$PROJECT_DIR$/theatre-performances/theatre-performances.iml" />
     </modules>

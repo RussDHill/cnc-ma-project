@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/theatre-performances/pom.xml" />
         <option value="$PROJECT_DIR$/theatre-bookings/pom.xml" />
         <option value="$PROJECT_DIR$/netflix-zuul-api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/theatre-booking-system/pom.xml" />
       </list>
     </option>
   </component>

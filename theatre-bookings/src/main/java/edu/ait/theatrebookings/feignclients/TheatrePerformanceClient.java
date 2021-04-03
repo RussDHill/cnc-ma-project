@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@FeignClient("netflix-zuul-api-gateway")    //
+@FeignClient("netflix-zuul-api-gateway")
 public interface TheatrePerformanceClient {
 
     @GetMapping("/theatre-performances/descriptions")
@@ -49,4 +49,7 @@ public interface TheatrePerformanceClient {
 
     @PutMapping("/theatre-performances/performances/")
     ResponseEntity updatePerformance(@RequestBody Performance newPerf);
+
+    @GetMapping("/theatre-performances/performance-config")
+    String getPerformanceConfig();
 }

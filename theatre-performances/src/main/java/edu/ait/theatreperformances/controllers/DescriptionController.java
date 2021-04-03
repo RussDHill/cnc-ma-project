@@ -1,10 +1,9 @@
 package edu.ait.theatreperformances.controllers;
 
+import edu.ait.theatreperformances.dto.Description;
 import edu.ait.theatreperformances.dto.DescriptionSummary;
-import edu.ait.theatreperformances.dto.Performance;
 import edu.ait.theatreperformances.exceptions.DataNotFoundException;
 import edu.ait.theatreperformances.repositories.DescriptionRepository;
-import edu.ait.theatreperformances.dto.Description;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;

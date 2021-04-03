@@ -57,7 +57,7 @@ public class TheatrePerformanceClientController {
     }
 
     @GetMapping("/performances")
-    List<Performance> getPerformancesByPage() {
+    List<Performance> getAllPerformances() {
         return theatrePerformanceClient.getPerformances();
     }
 
@@ -79,5 +79,10 @@ public class TheatrePerformanceClientController {
     @PutMapping("performances/")
     ResponseEntity updatePerformance(@RequestBody Performance newPerf) {
         return theatrePerformanceClient.updatePerformance(newPerf);
+    }
+
+    @GetMapping("/performance-config")
+    String getPerformanceConfig() {
+        return theatrePerformanceClient.getPerformanceConfig();
     }
 }
